@@ -1,0 +1,74 @@
+{
+  "Navbar": {
+    "User name": "اسم المستخدم",
+    "User control": "التحكم بالمستخدم",
+    "language": "english"
+  },
+  "MainNav": {
+    "General": "عام",
+    "Dashboard": "لوحة التحكم",
+    "Reporte": "تقرير المسار",
+    "Reportes": "تقارير المسار",
+    "Usuario": "المستخدم",
+    "Perfil": "الملف الشخصي",
+    "Administrador": "المسؤول",
+    "Control de rutas": "إدارة المسارات",
+    "Control usuarios": "إدارة المستخدمين"
+  },
+  "Image": {
+    "Change": "تغيير الصورة",
+    "user": "@اسم-المستخدم",
+    "email": "puser@email.com"
+  },
+  "Information": {
+    "Information": "المعلومات",
+    "Name": "الاسم",
+    "NameLast": "الاسم، اللقب",
+    "Email": "الايميل",
+    "EmailEx": "user@email.com",
+    "Tel": "رقم الهاتف",
+    "TelEx": "+51 966 696 123",
+    "Plan": "الخطة",
+    "PlanEx": "محدد مسبقاً",
+    "Light/Dark": "الضوء/الظلام",
+    "Preferences": "الاداء"
+  },
+  "UserSetting": {
+    "Setting": "إعدادات المستخدم",
+    "Details": "التفاصيل",
+    "Name": "الاسم",
+    "NameError": "الاسم مطلوب",
+    "NameValid": "الاسم صالح",
+    "putName":"ضع الاسم الاول....",
+    "putNameLasd":"ضع الاسم الاخير...",
+    "putEmaill":"ضع البريد الالكتروني...",
+    "putNumber":"ضع الرقم الهاتف..",
+
+    "LastName": "اللقب",
+    "LastNameError": "اللقب مطلوب",
+    "LastNameValid": "اللقب صالح",
+    "Email": "البريد الإلكتروني",
+    "EmailError": "البريد الإلكتروني مطلوب",
+    "EmailInvalid": "البريد الإلكتروني غير صالح",
+    "EmailValid": "البريد الإلكتروني صالح",
+    "Number": "رقم الهاتف:",
+    "NumberError": "الرقم مطلوب",
+    "NumberInvalid": "الرقم صالح",
+    "btn": "حفظ التغييرات"
+  },
+  "PasswordSetting": {
+    "Password": "كلمة المرور",
+    "ChangePassword": "تغيير كلمة المرور",
+    "PasswordValid": "كلمة المرور صالحة",
+    "PasswordRequired": "كلمة المرور مطلوبة",
+    "PasswordPut": "أدخل كلمة المرور الخاصة بك...",
+    "confirmPassword": "تأكيد كلمة المرور...",
+    "confirmPasswordValid": "كلمة المرور متطابقة.",
+    "rePassword": "يجب أن تتطابق كلمات المرور",
+    "rePasswordRequired": "تأكيد كلمة المرور مطلوب",
+    "newPassword": "كلمة مرور جديدة",
+    "passwordMatch":"كلمة المرور يجب ان تكون اقل من 8 حروف",
+    "putPassword": "أدخل كلمة المرور الجديدة...",
+    "btn": "حفظ التغييرات"
+  }
+}

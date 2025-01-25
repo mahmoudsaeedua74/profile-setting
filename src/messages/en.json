@@ -1,0 +1,75 @@
+{
+  "Navbar": {
+    "User name": "User Name",
+    "User control": "Control de rutas",
+    "language": "العربية"
+  },
+  "MainNav": {
+    "General": "General",
+    "Dashboard": "Dashboard",
+    "Reporte": "Reporte de ruta",
+    "Reportes": "Reporte de ruta",
+    "Perfil": "Perfil",
+    "Usuario": "Usuario",
+    "Administrador": "Administrador",
+    "Control de rutas": "Control de rutas",
+    "Control usuarios": "Control usuarios"
+  },
+  "Image": {
+    "Change": "Change Image",
+    "user": "@User-Name",
+    "email": " puser@email.com"
+  },
+  "Information": {
+    "Information": "Information",
+    "Name": "Name",
+    "NameLast": "Name, Last Name",
+    "Email": "Email",
+    "EmailEx": "user@email.com",
+    "Tel": "Tel",
+    "TelEx": "+51 966 696 123",
+    "Plan": "Plan",
+    "PlanEx": "Hardcoded",
+    "Light/Dark": "Light/Dark",
+    "Preferences": "Preferences"
+  },
+  "UserSetting": {
+    "Setting": "User Settings",
+    "Details": "Details",
+    "Name": "Name",
+    "NameError": "Name is required",
+    "NameValid": "Name is valid",
+    
+    "putName":"put your name...",
+    "putNameLasd":"put your Last name...",
+    "putEmaill":"put your Email...",
+    "putNumber":"put your Number..",
+
+    "LastName": "Last Name",
+    "LastNameError": "Last Name is required",
+    "LastNameValid": "Last Name is valid",
+    "Email": "Email",
+    "EmailError": "Email is required",
+    "EmailInvalid": "Invalid Email",
+    "EmailValid": "Email is valid",
+    "Number": "Tel-Number:",
+    "NumberError": "Number is required",
+    "NumberInvalid": " Number is valid",
+    "btn": "save Change"
+  },
+  "PasswordSetting": {
+    "Password": "Password",
+    "ChangePassword": "Change Password",
+    "PasswordValid": "Password is valid",
+    "PasswordRequired":"Password is required",
+    "PasswordPut":"Put your password...",
+    "confirmPassword":"Confirm password...",
+    "confirmPasswordValid":"Password is match.",
+    "rePassword":"Passwords must match",
+    "rePasswordRequired":"Password confirmation is required",
+    "newPassword":"New password",
+    "passwordMatch":"Password must be at least 8 characters",
+    "putPassword":"Put your new password...",
+    "btn": "save Change"
+  }
+}

@@ -1,21 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comfortaa:wght@300..700&family=Electrolize&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+  font-family: "Inter", serif;
+
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.btnSave {
+    @apply bg-btnColor px-4 py-2 focus:ring-[#a02342] hover:bg-[#a02342] focus:bg-[#a02342]
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.btnPas {
+    @apply bg-mainColor px-4 py-2 focus:ring-[#2a0c50] hover:bg-[#2a0c50] focus:bg-[#2a0c50]
+}
+.formError {
+    @apply mt-2 text-sm text-red-600 px-4
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .formValid {
+    @apply mt-2 text-sm text-green-600
+  }
+  .leaflet-tooltip-top::before {
+    border-top: 110px solid #6D5BBE !important;
+    bottom: -37.97px !important;
+    z-index: -1 !important;
+    border-left: 30px solid transparent !important;
+    border-right: 90px solid transparent !important;
+    left: 60% !important;
+    transform: translateX(-50%) ;
+  }
+  
