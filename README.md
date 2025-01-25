@@ -34,8 +34,6 @@ This is a **Profile Settings Page** project built with React, Formik, Yup for fo
 - Integrated a map with a marker pointing to the **Pyramids of Giza**.
 
 ---
-
-
 ## Technologies Used
 
 - **React** - For building the user interface.
@@ -43,10 +41,6 @@ This is a **Profile Settings Page** project built with React, Formik, Yup for fo
 - **Yup** - For form validation.
 - **i18next** (or **react-intl**) - For localization and supporting Arabic.
 - **JSON Server** (Optional) - For providing a backend-like API to handle data.
-- **Cypress** (Optional) - For end-to-end testing of the application.
-- **Leaflet**: A leading open-source JavaScript library for embedding interactive maps.
-
-
 ---
 
 1. **Clone the Repository**
