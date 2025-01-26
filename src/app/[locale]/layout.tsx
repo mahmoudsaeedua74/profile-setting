@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import Navbar from "@/components/Navbar/Navbar";
+import { Toaster } from "react-hot-toast";
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>; // Change this to a Promise
@@ -22,14 +23,14 @@ export default async function LocaleLayout({
     notFound();
   }
   const direction = locale === "ar" || locale === "he" ? "rtl" : "ltr";
-
   return (
     <html lang={locale} dir={direction}>
       <body>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <main className="grid grid-cols-1 sm:grid-cols-[1fr_5fr] ov-x ">
+          <main className="grid grid-cols-1 sm:grid-cols-[1fr_5fr] overflow-x-hidden">
             <Navbar />
             {children}
+            <Toaster />
           </main>
         </NextIntlClientProvider>
       </body>

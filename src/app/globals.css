@@ -30,4 +30,6 @@ body{
     left: 60% !important;
     transform: translateX(-50%) ;
   }
-  
+  .nav {
+    z-index: 555555555555555555555555555555555;
+  }

@@ -4,7 +4,8 @@ import user from "@/assets/images/avatar-04.png";
 import Image, { StaticImageData } from "next/image";
 import { IoSettingsOutline } from "react-icons/io5";
 import { useTranslations } from "next-intl";
-export default function UserImage() {
+import { UserInfoProps } from "@/Types/btn";
+export default function UserImage({userInfo}:UserInfoProps) {
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [image, setImage] = useState<string | StaticImageData>(user);
   const t = useTranslations("Image");
@@ -54,14 +55,14 @@ export default function UserImage() {
             alt="user"
             width={200}
             height={200}
-            className="rounded-full"
+            className="rounded-full w-48 h-48"
           />
         </div>
         <div>
-          <p className="text-mainColor text-h5 font-semibold">{t("user")}</p>
+          <p className="text-mainColor text-h5 font-semibold">{userInfo.Name}</p>
           <p className="text-textColor dark:text-white  font-semibold text-h6">
             {" "}
-            {t("email")}
+            {userInfo.email}
           </p>
         </div>
       </div>

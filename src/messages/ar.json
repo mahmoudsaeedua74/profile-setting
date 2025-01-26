@@ -1,7 +1,7 @@
 {
   "Navbar": {
-    "User name": "اسم المستخدم",
-    "User control": "التحكم بالمستخدم",
+    "User name": " المستخدم",
+    "User control": "التحكم",
     "language": "english"
   },
   "MainNav": {
@@ -57,8 +57,8 @@
     "btn": "حفظ التغييرات"
   },
   "PasswordSetting": {
-    "Password": "كلمة المرور",
-    "ChangePassword": "تغيير كلمة المرور",
+    "Password":  "تغيير كلمة المرور",
+    "ChangePassword": " كلمة المرور القديمه " ,
     "PasswordValid": "كلمة المرور صالحة",
     "PasswordRequired": "كلمة المرور مطلوبة",
     "PasswordPut": "أدخل كلمة المرور الخاصة بك...",

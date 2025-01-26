@@ -1,7 +1,7 @@
 {
   "Navbar": {
-    "User name": "User Name",
-    "User control": "Control de rutas",
+    "User name": "User ",
+    "User control": "Control",
     "language": "العربية"
   },
   "MainNav": {
@@ -58,8 +58,8 @@
     "btn": "save Change"
   },
   "PasswordSetting": {
-    "Password": "Password",
-    "ChangePassword": "Change Password",
+    "Password": "Change Password",
+    "ChangePassword": "Old Password",
     "PasswordValid": "Password is valid",
     "PasswordRequired":"Password is required",
     "PasswordPut":"Put your password...",

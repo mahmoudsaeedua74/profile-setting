@@ -1,16 +1,39 @@
+"use client";
+import { UserValues } from "@/Types/btn";
 import Button from "@/Ui/Button";
+import axios from "axios";
 import { useFormik } from "formik";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 import * as Yup from "yup";
 export default function UserPassword() {
   const t = useTranslations("PasswordSetting");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function getPassword(values: UserValues): Promise<void> {
+    toast.loading("loading...");
+    setIsSubmitting(true);
+    try {
+      const { data } = await axios.post("http://localhost:3001/user", values);
+      setTimeout(() => {
+        toast.dismiss();
+        toast.success("success...");
+        setIsSubmitting(false);
+      }, 1000);
+      console.log(data,"getPassword");
+    } catch {
+      setTimeout(() => {
+        toast.dismiss();
+        toast.error("Server is down or an error occurred.");
+        setIsSubmitting(false);
+      }, 1000);
+
+    }
+  }
   function validationSchema() {
     return Yup.object({
       password: Yup.string().required(t("PasswordRequired")),
-      rePassword: Yup.string()
-        .oneOf([Yup.ref("password")], t("rePassword"))
-        .required(t("rePasswordRequired")),
       newPassword: Yup.string()
         .min(8, t("passwordMatch"))
         .required(t("rePasswordRequired")),
@@ -19,26 +42,23 @@ export default function UserPassword() {
         .required(t("rePasswordRequired")),
     });
   }
-
   const formik = useFormik({
     initialValues: {
       password: "",
-      rePassword: "",
       newPassword: "",
       confirmPassword: "",
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      getPassword(values);
     },
   });
-
   return (
     <form className="text-h5 space-y-6" onSubmit={formik.handleSubmit}>
       <p className="font-semibold text-h5  mt-6 mb-4">{t("Password")}</p>
       <div>
         <label className="px-3" htmlFor="password">
-        {t("ChangePassword")}
+          {t("ChangePassword")}
         </label>
         <div className="flex-col sm:flex-col md:flex-col  lg:flex-row xl:flex-col 2xl:flex-row  flex  gap-12 mt-3">
           <div>
@@ -57,28 +77,11 @@ export default function UserPassword() {
               )
             )}
           </div>
-          <div>
-            <input
-              className="bg-[#E8E8E8] rounded-[10px] px-5 py-2 focus:outline-none"
-              id="rePassword"
-              {...formik.getFieldProps("rePassword")}
-              type="password"
-              placeholder={t("confirmPassword")}
-            />
-            {formik.touched.rePassword && formik.errors.rePassword ? (
-              <p className="formError">{formik.errors.rePassword}</p>
-            ) : (
-              formik.touched.rePassword && (
-                <p className="formValid">{t("confirmPasswordValid")}</p>
-              )
-            )}
-          </div>
         </div>
       </div>
-
       <div>
         <label className="px-3 " htmlFor="newPassword">
-        {t("newPassword")}
+          {t("newPassword")}
         </label>
         <div className="flex  flex-col sm:flex-col md:flex-col  lg:flex-row xl:flex-col 2xl:flex-row   gap-12 mt-2 mb-8">
           <div>
@@ -115,7 +118,9 @@ export default function UserPassword() {
           </div>
         </div>
       </div>
-      <Button style="secondary">{t("PasswordValid")}</Button>
+      <Button style="secondary">
+         {isSubmitting ? "loading..." : t("PasswordValid")}
+      </Button>
     </form>
   );
 }

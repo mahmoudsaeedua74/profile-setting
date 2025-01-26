@@ -1,9 +1,34 @@
+"use client";
+import { UserValues } from "@/Types/btn";
 import Button from "@/Ui/Button";
+import axios from "axios";
 import { useFormik } from "formik";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 import * as Yup from "yup";
 export default function UserDetails() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  async function postUser(values: UserValues): Promise<void> {
+    toast.loading("loading...");
+    setIsSubmitting(true);
+    try {
+      const { data } = await axios.post("http://localhost:3001/user", values);
+      setTimeout(() => {
+        toast.dismiss();
+        toast.success("success...");
+        setIsSubmitting(false);
+      }, 1000);
+      console.log(data,"user details");
+    } catch  {
+      setTimeout(() => {
+        toast.dismiss();
+        toast.error("Server is down or an error occurred.");
+        setIsSubmitting(false);
+      }, 1000);
+
+    }
+  }
   const t = useTranslations("UserSetting");
   function validationSchema() {
     return Yup.object({
@@ -22,7 +47,7 @@ export default function UserDetails() {
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      postUser(values);
     },
   });
   return (
@@ -111,7 +136,7 @@ export default function UserDetails() {
       </div>
 
       <Button style="primary" onClick={() => {}}>
-        {t("btn")}
+        {isSubmitting ? "loading..." : t("btn")}
       </Button>
     </form>
   );
