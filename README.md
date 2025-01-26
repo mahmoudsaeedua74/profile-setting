@@ -50,6 +50,29 @@ git clone https://github.com/your-username/profile-settings-page.git
 cd profile-settings-page
  npm install
 npm start
+## JSON Server Integration
+
+This project uses **JSON Server** as a mock backend to simulate RESTful API operations.
+
+### How to Set Up JSON Server
+
+# JSON Server with Axios
+
+This project uses `json-server` to quickly set up a mock API and `axios` to make HTTP requests to the local server to fetch data.
+
+## Setup and Usage
+
+1. **Install JSON Server**: First, install `json-server` globally by running the following command in your terminal:
+
+   ```bash
+   npm install -g json-server
+json-server --watch db.json --port 3001
+
+
+
+
+
+
 ![Screenshot 2025-01-25 163308](https://github.com/user-attachments/assets/c6a83e70-615b-4ead-a836-7f8ca67915f6)
 ![Screenshot 2025-01-25 163258](https://github.com/user-attachments/assets/d20aa268-2eb0-4832-bb60-16b9015ee3d4)
 
