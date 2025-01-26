@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Profile Settings Page
 
-## Getting Started
+This is a **Profile Settings Page** project built with React, Formik, Yup for form validation, and additional features like localization, dark mode, and a map integration.
 
-First, run the development server:
+## Features
+
+### 1. **Form Functionality**
+- The form allows users to manage their profile information.
+- **Formik** is used to handle form state management.
+- **Yup** is used for form validation.
+- Fields in the form include:
+  - **Name:** First and Last name (both required).
+  - **Email:** Valid email format.
+  - **Phone Number:** Valid phone number format.
+  - **Password Change:** Includes Old Password, New Password, and Confirm New Password with proper validation.
+
+### 2. **Profile Image Upload**
+- Users can upload a profile image by clicking on the existing image.
+- The uploaded image will be displayed immediately after the upload.
+
+### 3. **Responsiveness**
+- The layout is fully responsive for mobile, tablet, and desktop views.
+
+### 4. **Sidebar**
+- A collapsible and hoverable sidebar is implemented with links to external URLs.
+
+### 5. **Dark Mode Toggle**
+- Basic dark mode functionality with a toggle switch.
+
+### 6. **Localization**
+- Basic support for Arabic translation using **i18next** (or **react-intl**) library.
+
+### 7. **Map Integration**
+- Integrated a map with a marker pointing to the **Pyramids of Giza**.
+
+---
+## Technologies Used
+
+- **React** - For building the user interface.
+- **Formik** - For managing form state.
+- **Yup** - For form validation.
+- **i18next** (or **react-intl**) - For localization and supporting Arabic.
+- **JSON Server** (Optional) - For providing a backend-like API to handle data.
+---
+
+1. **Clone the Repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/your-username/profile-settings-page.git
+cd profile-settings-page
+ npm install
+npm start
+## JSON Server Integration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project uses **JSON Server** as a mock backend to simulate RESTful API operations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### How to Set Up JSON Server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# JSON Server with Axios
 
-## Learn More
+This project uses `json-server` to quickly set up a mock API and `axios` to make HTTP requests to the local server to fetch data.
 
-To learn more about Next.js, take a look at the following resources:
+## Setup and Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Install JSON Server**: First, install `json-server` globally by running the following command in your terminal:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install -g json-server
+json-server --watch db.json --port 3001
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+![Screenshot 2025-01-25 163308](https://github.com/user-attachments/assets/c6a83e70-615b-4ead-a836-7f8ca67915f6)
+![Screenshot 2025-01-25 163258](https://github.com/user-attachments/assets/d20aa268-2eb0-4832-bb60-16b9015ee3d4)
+
