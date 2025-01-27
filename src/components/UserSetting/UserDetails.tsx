@@ -62,7 +62,7 @@ export default function UserDetails() {
             {t("Name")}
           </label>
           <input
-            className="bg-[#E8E8E8]  rounded-[10px] px-5 py-2 focus:outline-none"
+            className="bg-[#E8E8E8] dark:bg-[#222222]  rounded-[10px] px-5 py-2 focus:outline-none"
             id="name"
             {...formik.getFieldProps("Name")}
             type="text"
@@ -79,7 +79,7 @@ export default function UserDetails() {
             {t("LastName")}
           </label>
           <input
-            className="bg-[#E8E8E8] rounded-[10px] px-5 py-2 focus:outline-none"
+            className="bg-[#E8E8E8] dark:bg-[#222222] rounded-[10px] px-5 py-2 focus:outline-none"
             id="LastName"
             {...formik.getFieldProps("LastName")}
             type="text"
@@ -100,7 +100,7 @@ export default function UserDetails() {
             {t("Email")}
           </label>
           <input
-            className="bg-[#E8E8E8] rounded-[10px] px-5 py-2 focus:outline-none"
+            className="bg-[#E8E8E8] dark:bg-[#222222] rounded-[10px] px-5 py-2 focus:outline-none"
             id="email"
             {...formik.getFieldProps("email")}
             type="email"
@@ -119,7 +119,7 @@ export default function UserDetails() {
             {t("Number")}
           </label>
           <input
-            className="bg-[#E8E8E8] mb-3 rounded-[10px] px-5 py-2 focus:outline-none"
+            className="bg-[#E8E8E8] dark:bg-[#222222] mb-3 rounded-[10px] px-5 py-2 focus:outline-none"
             id="Number"
             {...formik.getFieldProps("Number")}
             type="tel"

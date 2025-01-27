@@ -63,7 +63,7 @@ export default function UserPassword() {
         <div className="flex-col sm:flex-col md:flex-col  lg:flex-row xl:flex-col 2xl:flex-row  flex  gap-12 mt-3">
           <div>
             <input
-              className="bg-[#E8E8E8] rounded-[10px] px-5 py-2 focus:outline-none"
+              className="bg-[#E8E8E8] dark:bg-[#222222]  placeholder:text-dark rounded-[10px] px-5 py-2 focus:outline-none"
               id="password"
               {...formik.getFieldProps("password")}
               type="password"
@@ -86,7 +86,7 @@ export default function UserPassword() {
         <div className="flex  flex-col sm:flex-col md:flex-col  lg:flex-row xl:flex-col 2xl:flex-row   gap-12 mt-2 mb-8">
           <div>
             <input
-              className="bg-[#E8E8E8] rounded-[10px] px-5 py-2 focus:outline-none"
+              className="bg-[#E8E8E8] dark:bg-[#222222] rounded-[10px] px-5 py-2 focus:outline-none"
               id="newPassword"
               {...formik.getFieldProps("newPassword")}
               type="password"
@@ -102,7 +102,7 @@ export default function UserPassword() {
           </div>
           <div>
             <input
-              className="bg-[#E8E8E8] rounded-[10px] px-5 py-2 focus:outline-none"
+              className="bg-[#E8E8E8] dark:bg-[#222222] rounded-[10px] px-5 py-2 focus:outline-none"
               id="confirmPassword"
               {...formik.getFieldProps("confirmPassword")}
               type="password"
