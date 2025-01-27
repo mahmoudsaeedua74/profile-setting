@@ -49,7 +49,7 @@ export default function UserImage({userInfo}:UserInfoProps) {
         </div>
       )}
       <div className="flex justify-center items-center flex-col">
-        <div className="rounded-full   z-10 border-4">
+        <div className="rounded-full  border-4">
           <Image
             src={image}
             alt="user"

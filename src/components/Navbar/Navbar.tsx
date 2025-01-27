@@ -27,8 +27,8 @@ export default function Navbar() {
         className={` 
           ${
             navIsOpen
-              ? " -translate-x-[100%] nav fixed  nav top-0 bottom-0 sm:translate-x-0 sm:static"
-              : "sm:translate-x-0 sm:static translate-x-0 fixed  nav top-0 bottom-0"
+              ? " -translate-x-[100%] z-50 fixed top-0 bottom-0 sm:translate-x-0 sm:static"
+              : "sm:translate-x-0 sm:static translate-x-0 fixed  z-50 top-0 bottom-0"
           }
           rounded w-full  sm:h-full  transition-all duration-500
             h-full`}
